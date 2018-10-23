@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Psychic</title>
+</head>
+
+<body>
+
+    <style>
+body {background:rgb(37, 83, 40);}
+
+        
+        </style>
+
+    <div id="game">
+        <p id="outcome"></p>
+    </div>
+    <h1>Word Guess</h1>
+    <script type="text/javascript">
+
+
+        var computerChoices = ["a", "b", "c"];
+
+
+        document.onkeyup = function (event) {
+
+            // Determines which key was pressed.
+            var userGuess = event.key;
+
+            // Randomly chooses a choice from the options array. This is the Computer's guess.
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            var outcomeText = document.getElementById('outcome');
+            //replaces with new input rather than build up, idk logic.
+         
+            outcomeText.innerText += "You guesses:" + userGuess + " computer thought: " + computerGuess;
+
+
+
+        
+
+           if (userGuess == ComputerChoice) {
+                alert("right");
+               
+            }
+
+              if (userGuess !== ComputerChoice) {
+                alert("right");
+               
+            }
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
